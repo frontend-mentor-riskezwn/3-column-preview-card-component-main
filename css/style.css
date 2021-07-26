@@ -5,12 +5,10 @@
     --clr-very-dark-cyan: hsl(179, 100%, 13%);
     --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
     --clr-very-light-gray: hsl(0, 0%, 95%);
-
     /* Fonts */
     --font-size: 15px;
     --f-lexend-deca: "Lexend Deca", sans-serif;
     --f-big-shoulders-display: "Big Shoulders Display", sans-serif;
-
 }
 
 * {
@@ -18,7 +16,53 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
+    font-size: var(--font-size)SS;
     background: var(--clr-very-light-gray);
     font-family: var(--f-lexend-deca);
+    color: var(--clr-transparent-white);
+    min-height: 100vh;
+    padding: 3em 1.3em;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    /*  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    background: yellowgreen;
+}
+
+.box {
+    padding: 2em;
+}
+
+.box#sedans {
+    background: var(--clr-bright-orange);
+}
+
+.box#suvs {
+    background: var(--clr-dark-cyan);
+}
+
+.box#luxury {
+    background: var(--clr-very-dark-cyan);
+}
+
+.box h2 {
+    font-family: var(--f-big-shoulders-display);
+    color: var(--clr-very-light-gray);
+}
+
+.box .button {
+    padding: .5em 1em;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    background: var(--clr-very-light-gray);
+    color: #000;
+    mix-blend-mode: screen;
 }
