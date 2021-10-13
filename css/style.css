@@ -18,7 +18,7 @@
 }
 
 body {
-    font-size: var(--font-size)SS;
+    font-size: var(--font-size);
     background: var(--clr-very-light-gray);
     font-family: var(--f-lexend-deca);
     color: var(--clr-transparent-white);
@@ -33,11 +33,17 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
-    background: yellowgreen;
 }
 
 .box {
-    padding: 2em;
+    padding: 2.5em;
+}
+
+.box:first-child {
+    border-radius: 0.5em 0.5em 0 0;
+}
+.box:last-child {
+    border-radius: 0 0 0.5em 0.5em;
 }
 
 .box#sedans {
@@ -53,11 +59,14 @@ body {
 }
 
 .box h2 {
+    margin: 1.2em 0;
+    font-size: 2em;
     font-family: var(--f-big-shoulders-display);
     color: var(--clr-very-light-gray);
 }
 
 .box .button {
+    margin: 3em 0 1.5em 0;
     padding: .5em 1em;
     border-radius: 30px;
     border: 2px solid var(--clr-very-light-gray);
@@ -70,4 +79,27 @@ body {
 .box .button:hover {
     background: #000;
     color: var(--clr-very-light-gray);
+}
+
+.attribution {
+    margin-top: 1em;
+    text-align: center;
+    color: hsl(0, 0%, 14%)
+}
+.attribution a {
+    color: hsl(0, 0%, 14%)
+}
+
+@media (min-width: 800px) {
+    .container {
+       flex-flow: row nowrap;
+       width: 60%;
+       margin: 0 auto;
+    }
+    .box:first-child {
+        border-radius: 0.5em 0 0 0.5em;
+    }
+    .box:last-child {
+        border-radius: 0 0.5em 0.5em 0;
+    }
 }
